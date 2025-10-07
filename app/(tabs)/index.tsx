@@ -23,7 +23,7 @@ export default function HomeScreen() {
         data={mockClothes}
         showMore={() =>
           router.push({
-            pathname: "/category",
+            pathname: "/section",
             params: { categoryName: "Top selling" },
           })
         }
@@ -33,7 +33,7 @@ export default function HomeScreen() {
         data={mockClothes}
         showMore={() =>
           router.push({
-            pathname: "/category",
+            pathname: "/section",
             params: { categoryName: "Top selling" },
           })
         }
@@ -43,7 +43,7 @@ export default function HomeScreen() {
         data={mockClothes}
         showMore={() =>
           router.push({
-            pathname: "/category",
+            pathname: "/section",
             params: { categoryName: "Top selling" },
           })
         }
@@ -53,7 +53,7 @@ export default function HomeScreen() {
         data={mockClothes}
         showMore={() =>
           router.push({
-            pathname: "/category",
+            pathname: "/section",
             params: { categoryName: "Top selling" },
           })
         }

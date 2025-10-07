@@ -44,12 +44,22 @@ const StyledButton: FC<StyledButtonProps> = ({
       ]}
     >
       {label && (
-        <StyledText variant={textVariant} style={styles.text}>
+        <StyledText
+          variant={textVariant}
+          style={[
+            styles.text,
+            variant === "borderless" && styles.textBorderless,
+          ]}
+        >
           {label}
         </StyledText>
       )}
       {icon && (
-        <Ionicons name={icon} size={14} color={color || COLORS.PRIMARY_ICON} />
+        <Ionicons
+          name={icon}
+          size={18}
+          color={(color && COLORS[color]) || COLORS.PRIMARY_BUTTON_TEXT}
+        />
       )}
     </TouchableOpacity>
   );
@@ -63,13 +73,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingVertical: 16,
     paddingHorizontal: 14,
-    borderRadius: 10,
+    borderRadius: 50,
     borderWidth: 1,
     borderColor: COLORS.PRIMARY_TEXT,
   },
 
   text: {
-    color: COLORS.PRIMARY_TEXT,
+    color: COLORS.PRIMARY_BUTTON_TEXT,
   },
   //size
   small: {
@@ -90,6 +100,9 @@ const styles = StyleSheet.create({
   borderless: {
     backgroundColor: "transparent",
     borderColor: "transparent",
+  },
+  textBorderless: {
+    color: COLORS.BLACK_BUTTON_TEXT,
   },
   diabled: {
     opacity: 0.7,

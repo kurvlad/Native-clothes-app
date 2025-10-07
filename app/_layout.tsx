@@ -23,7 +23,7 @@ export default function RootLayout() {
           options={{ headerShown: false, title: "Назад", headerBackTitle: "" }}
         />
         <Stack.Screen
-          name="category"
+          name="section"
           options={{
             headerTitle: "",
           }}

@@ -5,7 +5,7 @@ import { Card } from "@/src/widgets/Card/Card";
 import { useLocalSearchParams } from "expo-router";
 import { FlatList, StyleSheet } from "react-native";
 
-export default function CategoryPage() {
+export default function SectionPage() {
   const params = useLocalSearchParams();
 
   const { categoryName } = params;

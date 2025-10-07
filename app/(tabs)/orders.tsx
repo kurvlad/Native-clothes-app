@@ -10,7 +10,7 @@ const Orders = () => {
       <StyledText>orders</StyledText>
       <StyledButton
         label="Открыть категории"
-        onPress={() => router.push("/category")}
+        onPress={() => router.push("/section")}
       />
     </StyledLayout>
   );

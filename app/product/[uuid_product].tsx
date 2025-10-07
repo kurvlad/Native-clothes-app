@@ -1,6 +1,7 @@
 import { getClothesById } from "@/src/shared/mock/mockClothesWithInfo";
 import Carousel from "@/src/shared/ui/Carousel";
 import ImageWithSkeleton from "@/src/shared/ui/ImageWithSkeleton";
+import StyledButton from "@/src/shared/ui/StyledButton";
 import StyledLayout from "@/src/shared/ui/StyledLayout";
 import StyledText from "@/src/shared/ui/StyledText";
 import { useLocalSearchParams } from "expo-router";
@@ -39,6 +40,11 @@ export default function ProductPage() {
         })}
       </StyledText>
       <StyledText variant="title">Оценка: {item?.rate}</StyledText>
+      <StyledButton
+        label="Добавить в корзину "
+        icon={"bag-add-outline"}
+        color="PRIMARY_BUTTON_TEXT"
+      />
     </StyledLayout>
   );
 }
