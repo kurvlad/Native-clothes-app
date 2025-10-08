@@ -1,9 +1,9 @@
 export const mockClothesWithInfo = [
   {
     uuid_product: "1",
-    title: "Woman jacket",
+    title: "Woman jacket1",
     price: 148,
-    sizes: ["s", "m", "l", "xl"],
+    sizes: ["XXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL", "XXXXL"],
     color: ["black", "yellow", "red"],
     src: "https://imgcdn.loverepublic.ru/upload/images/54505/5450542127_62.jpg",
     images: [
@@ -27,7 +27,7 @@ export const mockClothesWithInfo = [
   },
   {
     uuid_product: "2",
-    title: "Woman jacket",
+    title: "Woman jacket2",
     price: 248,
     sizes: ["xs", "s", "m", "l"],
     color: ["blue", "white", "navy"],
@@ -53,7 +53,7 @@ export const mockClothesWithInfo = [
   },
   {
     uuid_product: "3",
-    title: "Woman jacket",
+    title: "Woman jacket3",
     price: 348,
     sizes: ["m", "l", "xl", "xxl"],
     color: ["green", "olive", "army"],

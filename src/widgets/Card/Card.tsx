@@ -8,8 +8,15 @@ interface CardInterface {
   src: string;
   price: number;
   isLiked?: boolean;
+  title: string;
 }
-export const Card = ({ uuid_product, src, price, isLiked }: CardInterface) => {
+export const Card = ({
+  uuid_product,
+  src,
+  price,
+  isLiked,
+  title,
+}: CardInterface) => {
   const router = useRouter();
   const cardPress = () => {
     router.push({
@@ -38,6 +45,7 @@ export const Card = ({ uuid_product, src, price, isLiked }: CardInterface) => {
         />
         <View style={styles.textContaier}>
           <StyledText variant="heading">{price && `$${price}`}</StyledText>
+          <StyledText variant="heading">{title && `${title}`}</StyledText>
         </View>
       </View>
     </TouchableOpacity>

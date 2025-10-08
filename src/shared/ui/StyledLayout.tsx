@@ -1,12 +1,20 @@
-import { ScrollView, StatusBar, StyleSheet, View } from "react-native";
+import {
+  ScrollView,
+  StatusBar,
+  StyleProp,
+  StyleSheet,
+  View,
+  ViewStyle,
+} from "react-native";
 import { FC, ReactNode } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 type StyledLayoutProps = {
   children: ReactNode;
+  style?: StyleProp<ViewStyle> | undefined;
 };
 
-const StyledLayout: FC<StyledLayoutProps> = ({ children }) => {
+const StyledLayout: FC<StyledLayoutProps> = ({ children, style }) => {
   const insets = useSafeAreaInsets();
   return (
     <View
@@ -17,6 +25,7 @@ const StyledLayout: FC<StyledLayoutProps> = ({ children }) => {
           // paddingBottom: insets.bottom,
           paddingBottom: 0,
         },
+        style,
       ]}
     >
       <ScrollView

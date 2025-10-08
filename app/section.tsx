@@ -24,6 +24,7 @@ export default function SectionPage() {
             src={item.src}
             price={item.price}
             isLiked={item.isLiked}
+            title={item.title}
           />
         )}
       />

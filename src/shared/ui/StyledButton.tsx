@@ -11,6 +11,7 @@ import { COLORS, COLORSTypes } from "@/src/shared/constants/ui";
 interface StyledButtonProps extends TouchableOpacityProps {
   label?: string;
   icon?: ComponentProps<typeof Ionicons>["name"];
+  sizeIcon?: number;
   size?: "default" | "large" | "small";
   variant?: "primary" | "danger" | "secondary" | "borderless";
   color?: COLORSTypes;
@@ -22,6 +23,7 @@ const StyledButton: FC<StyledButtonProps> = ({
   icon,
   style,
   size = "default",
+  sizeIcon,
   variant = "primary",
   disabled,
   color,
@@ -57,7 +59,7 @@ const StyledButton: FC<StyledButtonProps> = ({
       {icon && (
         <Ionicons
           name={icon}
-          size={18}
+          size={sizeIcon || 18}
           color={(color && COLORS[color]) || COLORS.PRIMARY_BUTTON_TEXT}
         />
       )}
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     borderRadius: 50,
     borderWidth: 1,
-    borderColor: COLORS.PRIMARY_TEXT,
+    borderColor: COLORS.PRIMARY_BORDER,
   },
 
   text: {

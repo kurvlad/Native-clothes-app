@@ -33,6 +33,7 @@ const CarouselCard = ({ data, title, showMore }: CarouselCardInterface) => {
               price={item.item.price}
               src={item.item.src}
               isLiked={item.item.isLiked}
+              title={item.item.title}
             />
           );
         }}

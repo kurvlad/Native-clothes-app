@@ -15,13 +15,16 @@ export const unstable_settings = {
 export default function RootLayout() {
   const colorScheme = useColorScheme();
 
+  DefaultTheme.colors.background = "rgb(255,255,255)";
+
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen
-          name="(tabs)"
-          options={{ headerShown: false, title: "Назад", headerBackTitle: "" }}
-        />
+      <Stack
+        screenOptions={{
+          headerBackTitle: "Назад",
+        }}
+      >
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="section"
           options={{

@@ -21,11 +21,11 @@ const StyledText: React.FC<StyledTextProps> = ({
     <Text
       style={[
         styles.base,
-        style,
         variant === "title" && styles.title,
         variant === "subtitle" && styles.subtitle,
         variant === "small" && styles.small,
         variant === "heading" && styles.heading,
+        style,
       ]}
       {...props}
     />

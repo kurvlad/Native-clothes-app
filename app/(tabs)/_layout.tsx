@@ -1,8 +1,8 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { COLORS } from "@/src/shared/constants/ui";
 
 import { Ionicons } from "@expo/vector-icons";
+import { COLORS } from "@/src/shared/constants/ui";
 
 export default function TabLayout() {
   return (
