@@ -21,8 +21,7 @@ const StyledLayout: FC<StyledLayoutProps> = ({ children, style }) => {
       style={[
         styles.container,
         {
-          paddingTop: insets.top,
-          // paddingBottom: insets.bottom,
+          paddingTop: insets.top + 20,
           paddingBottom: 0,
         },
         style,

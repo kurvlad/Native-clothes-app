@@ -1,5 +1,7 @@
 import {
+  StyleProp,
   StyleSheet,
+  TextStyle,
   TouchableOpacity,
   TouchableOpacityProps,
 } from "react-native";
@@ -16,6 +18,7 @@ interface StyledButtonProps extends TouchableOpacityProps {
   variant?: "primary" | "danger" | "secondary" | "borderless";
   color?: COLORSTypes;
   textVariant?: variantText;
+  textStyle?: StyleProp<TextStyle>;
 }
 
 const StyledButton: FC<StyledButtonProps> = ({
@@ -27,6 +30,7 @@ const StyledButton: FC<StyledButtonProps> = ({
   variant = "primary",
   disabled,
   color,
+  textStyle,
   textVariant,
   ...props
 }) => {
@@ -51,6 +55,7 @@ const StyledButton: FC<StyledButtonProps> = ({
           style={[
             styles.text,
             variant === "borderless" && styles.textBorderless,
+            textStyle,
           ]}
         >
           {label}
