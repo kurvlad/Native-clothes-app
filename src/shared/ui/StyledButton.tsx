@@ -10,7 +10,7 @@ import { ComponentProps, FC } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS, COLORSTypes } from "@/src/shared/constants/ui";
 
-interface StyledButtonProps extends TouchableOpacityProps {
+export interface StyledButtonProps extends TouchableOpacityProps {
   label?: string;
   icon?: ComponentProps<typeof Ionicons>["name"];
   sizeIcon?: number;
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 1,
     borderColor: COLORS.PRIMARY_BORDER,
+    gap: 12,
   },
 
   text: {

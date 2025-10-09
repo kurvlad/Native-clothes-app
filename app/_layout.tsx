@@ -32,6 +32,12 @@ export default function RootLayout() {
           }}
         />
         <Stack.Screen
+          name="address/index"
+          options={{
+            headerTitle: "Address",
+          }}
+        />
+        <Stack.Screen
           name="product/[uuid_product]"
           options={{
             headerTitle: "",

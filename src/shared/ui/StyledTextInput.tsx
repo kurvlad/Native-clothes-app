@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: COLORS.PRIMARY_BORDER,
+    backgroundColor: COLORS.BACKGROUND,
   },
   error: {
     borderColor: COLORS.PRIMARY_DANGER,

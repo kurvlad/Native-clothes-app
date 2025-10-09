@@ -4,7 +4,7 @@ import BottomSheet from "@/src/shared/ui/BottomSheet";
 
 import Carousel from "@/src/shared/ui/Carousel";
 import ImageWithSkeleton from "@/src/shared/ui/ImageWithSkeleton";
-import StyledButton from "@/src/shared/ui/StyledButton";
+import StyledButtonFixed from "@/src/shared/ui/StyledButtonFixed";
 import StyledLayout from "@/src/shared/ui/StyledLayout";
 import StyledText from "@/src/shared/ui/StyledText";
 import CharacterButton from "@/src/widgets/CharacterButton/CharacterButton";
@@ -85,16 +85,13 @@ export default function ProductPage() {
           </View>
         </View>
       </StyledLayout>
-      <View style={styles.fixedButtonContainer}>
-        <StyledButton
-          label="Добавить в корзину "
-          icon={"bag-add-outline"}
-          color="PRIMARY_BUTTON_TEXT"
-          style={styles.fixedButton}
-          onPress={handleOpenCart}
-          disabled={!Boolean(size) || !Boolean(color) || !Boolean(quantity)}
-        />
-      </View>
+      <StyledButtonFixed
+        label="Добавить в корзину "
+        icon={"bag-add-outline"}
+        color="PRIMARY_BUTTON_TEXT"
+        onPress={handleOpenCart}
+        disabled={!Boolean(size) || !Boolean(color) || !Boolean(quantity)}
+      />
       <BottomSheet
         title="Вы добавили в корзину"
         isVisible={isVisibleCart}
@@ -122,16 +119,6 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     aspectRatio: 1,
-  },
-  fixedButtonContainer: {
-    position: "absolute",
-    left: 15,
-    right: 15,
-    bottom: 25,
-    backgroundColor: "transparent",
-  },
-  fixedButton: {
-    width: "100%",
   },
   price: {
     color: COLORS.PRIMARY_ACTIVE_BUTTON,
