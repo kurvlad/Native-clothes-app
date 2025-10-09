@@ -28,27 +28,21 @@ const AddressPage = () => {
             handleNavigateChangeAddress("1");
           }}
         >
-          <StyledText>
-            Казань, ул. Кремлевская набережная, д. 3, кв.102
-          </StyledText>
+          <StyledText>Москва, ул. Ленина, д. 1, кв.102</StyledText>
         </InfoSection>
         <InfoSection
           onPress={() => {
             handleNavigateChangeAddress("2");
           }}
         >
-          <StyledText>
-            Казань, ул. Кремлевская набережная, д. 3, кв.102
-          </StyledText>
+          <StyledText>Москва, ул. Ленина, д. 1, кв.102</StyledText>
         </InfoSection>
         <InfoSection
           onPress={() => {
             handleNavigateChangeAddress("3");
           }}
         >
-          <StyledText>
-            Казань, ул. Кремлевская набережная, д. 3, кв.102
-          </StyledText>
+          <StyledText>Москва, ул. Ленина, д. 1, кв.102</StyledText>
         </InfoSection>
       </StyledLayout>
       <StyledButtonFixed

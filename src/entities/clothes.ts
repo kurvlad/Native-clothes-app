@@ -12,6 +12,7 @@ export class ClothesEntities {
   src: string;
   isLiked: boolean;
   title: string;
+
   constructor(props: ClothesEntitiesInterface) {
     this.uuid_product = props.uuid_product;
     this.price = props.price;

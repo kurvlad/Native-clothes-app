@@ -12,6 +12,38 @@ export const unstable_settings = {
   anchor: "(tabs)",
 };
 
+function RootNavigator() {
+  return (
+    <Stack
+      screenOptions={{
+        headerBackTitle: "Назад",
+      }}
+    >
+      <Stack.Screen name="login" options={{ headerShown: false }} />
+
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="section"
+        options={{
+          headerTitle: "",
+        }}
+      />
+      <Stack.Screen
+        name="address/index"
+        options={{
+          headerTitle: "Address",
+        }}
+      />
+      <Stack.Screen
+        name="product/[uuid_product]"
+        options={{
+          headerTitle: "",
+        }}
+      />
+    </Stack>
+  );
+}
+
 export default function RootLayout() {
   const colorScheme = useColorScheme();
 
@@ -19,31 +51,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack
-        screenOptions={{
-          headerBackTitle: "Назад",
-        }}
-      >
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="section"
-          options={{
-            headerTitle: "",
-          }}
-        />
-        <Stack.Screen
-          name="address/index"
-          options={{
-            headerTitle: "Address",
-          }}
-        />
-        <Stack.Screen
-          name="product/[uuid_product]"
-          options={{
-            headerTitle: "",
-          }}
-        />
-      </Stack>
+      <RootNavigator />
       <StatusBar style="auto" />
     </ThemeProvider>
   );

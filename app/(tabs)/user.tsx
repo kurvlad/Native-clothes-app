@@ -9,6 +9,10 @@ import { StyleSheet, View } from "react-native";
 
 const User = () => {
   const router = useRouter();
+  const hangleOut = () => {
+    router.replace("/login");
+  };
+
   return (
     <StyledLayout>
       <View style={styles.container}>
@@ -48,7 +52,7 @@ const User = () => {
           <NavigationButton title={"Помощь"} onPress={() => {}} />
           <NavigationButton title={"FAQ"} onPress={() => {}} />
         </View>
-        <StyledButton label="Выйти" variant="danger" />
+        <StyledButton label="Выйти" variant="danger" onPress={hangleOut} />
       </View>
     </StyledLayout>
   );
