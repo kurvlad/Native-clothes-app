@@ -1,3 +1,4 @@
+import { useAuthContext } from "@/src/appGlobal/contexts/AuthContext";
 import InfoSection from "@/src/shared/ui/InfoSection";
 import NavigationButton from "@/src/shared/ui/NavigationButton";
 import StyledAvatar from "@/src/shared/ui/StyledAvatar";
@@ -9,7 +10,9 @@ import { StyleSheet, View } from "react-native";
 
 const User = () => {
   const router = useRouter();
+  const { logout } = useAuthContext();
   const hangleOut = () => {
+    logout();
     router.replace("/login");
   };
 

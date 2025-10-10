@@ -54,6 +54,7 @@ const StyledButton: FC<StyledButtonProps> = ({
           variant={textVariant}
           style={[
             styles.text,
+            variant === "secondary" && styles.textSecondary,
             variant === "borderless" && styles.textBorderless,
             textStyle,
           ]}
@@ -108,6 +109,9 @@ const styles = StyleSheet.create({
   borderless: {
     backgroundColor: "transparent",
     borderColor: "transparent",
+  },
+  textSecondary: {
+    color: COLORS.BLACK_BUTTON_TEXT,
   },
   textBorderless: {
     color: COLORS.BLACK_BUTTON_TEXT,

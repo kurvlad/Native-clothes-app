@@ -7,7 +7,9 @@ import StyledText from "@/src/shared/ui/StyledText";
 import { useRouter } from "expo-router";
 import { useAuthContext } from "@/src/appGlobal/contexts/AuthContext";
 
-export default function LoginPage() {
+export default function RegistrationPage() {
+  const [name, setName] = useState("");
+  const [family, setFamily] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -17,17 +19,33 @@ export default function LoginPage() {
     login();
     router.replace("/");
   };
-  const handleRouteRegistration = () => {
-    router.replace("/registration");
+  const handleRouteLogin = () => {
+    router.replace("/login");
   };
 
   return (
     <StyledLayout style={styles.container}>
       <View style={styles.content}>
         <StyledText variant="title" style={styles.title}>
-          Вход в аккаунт
+          Создание аккаунта
         </StyledText>
 
+        <StyledTextInput
+          placeholder="Имя"
+          value={name}
+          onChangeText={setName}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          style={styles.input}
+        />
+        <StyledTextInput
+          placeholder="Фамилия"
+          value={family}
+          onChangeText={setFamily}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          style={styles.input}
+        />
         <StyledTextInput
           placeholder="Email"
           value={email}
@@ -46,13 +64,13 @@ export default function LoginPage() {
         />
 
         <StyledButton
-          label="Войти"
+          label="Зарегистрироваться"
           onPress={handleLogin}
           style={styles.button}
         />
         <StyledButton
-          label="Зарегистрироваться"
-          onPress={handleRouteRegistration}
+          label="Назад"
+          onPress={handleRouteLogin}
           style={styles.button}
           variant="secondary"
         />
